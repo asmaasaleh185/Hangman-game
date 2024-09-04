@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <!-- Start header -->
+    <header class="display">
+        <div class=" menu-header display">
+            <button tabindex="0" class="back-btn">
+                <img src="images/icon-back.svg">
+            </button>
+            <h1 class="header-title"></h1>
+        </div>
+        <div class="game-header display">
+            <div class="left">
+                <button tabindex="0" class="pause-menu-btn">
+                    <img src="images/icon-menu.svg">
+                </button>
+
+                <h2 class="category-header"></h2>
+            </div>
+
+            <div class="right">
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+
+                    </div>
+                </div>
+                <img src="images/icon-heart.svg">
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+    <div class="container">
+        <!-- Start Home page -->
+        <section id="home" class="">
+            <div class="home-page">
+                <img class="home-logo" src="images/logo.svg" alt="">
+                <button class="play-btn"><img src="images/icon-play.svg" alt=""></button>
+                <button class="how-to-btn">How to play</button>
+            </div>
+        </section>
+        <!-- End Home Page -->
+        <!-- start How TO Play page -->
+        <section id="instruction" class="display">
+            <div class="instruction">
+                <h2>01</h2>
+                <h3>Choose a category</h3>
+                <p>
+                    choose a word category, like sports or movies.
+                    The computer then randomly selects a secret word from that
+                    topic and shows you blanks for each letter of the word.
+                </p>
+            </div>
+            <div class="instruction">
+                <h2>02</h2>
+                <h3>Guess letters</h3>
+                <p>
+                    Take turns guessing letters. The computer fills in the relevant blank spaces if your guess is
+                    correct.
+                    Otherwise,
+                    you lose some health, which empties after eight incorrect guesses.
+                </p>
+            </div>
+            <div class="instruction">
+                <h2>03</h2>
+                <h3>Win or lose</h3>
+                <p>
+                    You win by guessing all the letters in the word before your health runs out. If the health bar
+                    empties
+                    before you guess
+                    the word, you lose.
+                </p>
+            </div>
+        </section>
+        <!-- end How TO Play page -->
+        <!-- start Categories Page -->
+        <section id="category" class="display">
+            <button tabindex="0" class="category-btn" value="Movies">
+                <h3>Movies</h3>
+            </button>
+            <button tabindex="0" class="category-btn" value="TV Shows">
+                <h3>Tv Shows</h3>
+            </button>
+            <button tabindex="0" class="category-btn" value="Countries">
+                <h3>Countries</h3>
+            </button>
+            <button tabindex="0" class="category-btn" value="Jobs">
+                <h3>Jobs</h3>
+            </button>
+            <button tabindex="0" class="category-btn" value="Animals">
+                <h3>Animals</h3>
+            </button>
+            <button tabindex="0" class="category-btn" value="Sports">
+                <h3>Sports</h3>
+            </button>
+        </section>
+        <!-- end Categories Page -->
+        <!-- Start Game Page -->
+        <section id="game" class="display">
+
+            <div class="hidden-word-container">
+
+            </div>
+
+            <div class="keyboard-container">
+                <div class="keyboard-row">
+                    <button tabindex="0" class="key-btn" value="a">
+                        <h3>a</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="b">
+                        <h3>b</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="c">
+                        <h3>c</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="d">
+                        <h3>d</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="e">
+                        <h3>e</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="f">
+                        <h3>f</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="g">
+                        <h3>g</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="h">
+                        <h3>h</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="i">
+                        <h3>i</h3>
+                    </button>
+                </div>
+
+                <div class="keyboard-row">
+                    <button tabindex="0" class="key-btn" value="j">
+                        <h3>j</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="k">
+                        <h3>k</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="l">
+                        <h3>l</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="m">
+                        <h3>m</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="n">
+                        <h3>n</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="o">
+                        <h3>o</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="p">
+                        <h3>p</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="q">
+                        <h3>q</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="r">
+                        <h3>r</h3>
+                    </button>
+                </div>
+
+                <div class="keyboard-row">
+                    <button tabindex="0" class="key-btn" value="s">
+                        <h3>s</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="t">
+                        <h3>t</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="u">
+                        <h3>u</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="v">
+                        <h3>v</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="w">
+                        <h3>w</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="x">
+                        <h3>x</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="y">
+                        <h3>y</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn" value="z">
+                        <h3>z</h3>
+                    </button>
+                    <button tabindex="0" class="key-btn hidden" value=" "></button>
+                </div>
+            </div>
+
+        </section>
+        <!-- End Game Page -->
+        <!-- Start inGame Menu -->
+        <section class="pause-menu game-menu overlay display">
+            <div class="menu">
+                <div class="game-menu-container menu">
+                    <h1 class="game-menu-heading pause-menu-heading">Paused</h1>
+                    <button tabindex="0" class="game-menu-btn continue-game-btn" value="continue">
+                        <h4>Continue</h4>
+                    </button>
+                    <button tabindex="0" class="game-menu-btn new-category-btn" value="new">
+                        <h4>new category</h4>
+                    </button>
+                    <button tabindex="0" class="game-menu-btn quit-game-btn" value="quit">
+                        <h4>quit game</h4>
+                    </button>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- End inGame Menu -->
+
+    </div>
+
+    <!-- JS Script -->
+    <script src="JS/script.js"></script>
+
+</body>
+
+</html>
