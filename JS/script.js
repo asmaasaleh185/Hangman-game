@@ -243,7 +243,7 @@ function checkLetter(letter) {
 
   if (wrongGuesses >= 8) {
     loseGame();
-  } else if (correctGuesses == hiddenWord.length) {
+  } else if (correctGuesses == hiddenWord.length && hiddenWord) {
     winGame();
   }
 }
